@@ -1,0 +1,38 @@
+cd C:\Windows\System32
+Get-InstalledModule -Name SitecoreInstallFramework
+-----------------------------------------------------------------------------------------------------------------------------------------------
+Installing Sitecore Experience Platform 9.2 Initial Release
+------------------------------------------------------------------------------------------------------------------------------------------------
+Step 00 : Software Checklist @Sitecore Portal https://dev.sitecore.net/
+https://dev.sitecore.net/Downloads/Sitecore_Experience_Platform/92/Sitecore_Experience_Platform_92_Initial_Release.aspx
+file:///C:/ResourceFiles/sitecore920/Quick_Installation_Guide_920%20Sitecore.pdf
+------------------------------------------------------------------------------------------------------------------------------------------------
+Step 01 : Install Solr-7.5.0 with HTTPS https://localhost:8989/solr/
+Step 02 : Install SIF 2.1.0 ( Sitecore Installation Framework ) 
+Step 03 : Updating Default values in JSON files
+Step 04 : Install http://sc920/sitecore/login by executing Powershell script i.e XP0-SingleDeveloper.ps1
+( Open Windows Powershell as ADMIN and promt at C:\ResourceFiles\sitecore920 ) Sitecore Admin password mCIhcKiH4ibDVvU6Z37O
+------------------------------------------------------------------------------------------------------------------------------------------------
+Step 03 : Update Default values in JSON files for the below list of Parameters
+------------------------------------------------------------------------------------------------------------------------------------------------
+1. SolrUrl           "DefaultValue": "https://localhost:8983/solr"
+2. SolrRoot          "DefaultValue": "c:\\solr-7.5.0"
+3. SolrService       "DefaultValue": "Solr-7.5.0"
+4. SqlServer         "DefaultValue": "DESKTOP-EKGEB6G\\SQLSERVER2016SP2"
+5. SqlAdminUser      "DefaultValue": "sa"
+6. SqlAdminPassword  "DefaultValue": "12345"
+------------------------------------------------------------------------------------------------------------------------------------------------
+In XP0-SingleDeveloper.ps1
+------------------------------------------------------------------------------------------------------------------------------------------------
+$Prefix = "SC920"
+$SCInstallRoot = "C:\ResourceFiles\sitecore920"
+$SolrUrl = "https://localhost:8983/solr"
+$SolrRoot = "C:\Solr-7.5.0"
+$SolrService = "Solr-7.5.0"
+$SqlServer = "DESKTOP-EKGEB6G\SQLSERVER2016SP2"
+$SqlAdminUser = "sa"
+$SqlAdminPassword = "12345"
+$XConnectPackage = (Get-ChildItem "$SCInstallRoot\Sitecore 9.2.0 rev. 002893 (OnPrem)_xp0xconnect.scwdp.zip").FullName
+$SitecorePackage = (Get-ChildItem "$SCInstallRoot\Sitecore 9.2.0 rev. 002893 (OnPrem)_single.scwdp.zip").FullName
+$IdentityServerPackage = (Get-ChildItem "$SCInstallRoot\Sitecore.IdentityServer 3.0.0 rev. 00211 (OnPrem)_identityserver.scwdp.zip").FullName
+------------------------------------------------------------------------------------------------------------------------------------------------

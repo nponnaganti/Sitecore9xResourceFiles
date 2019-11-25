@@ -1,0 +1,24 @@
+9fPko4tDwmjmKL1Nf8Bo
+
+https://sc910sxa.sc
+
+sc910sxa.sc
+
+443
+
+Ashok    50
+CC  :    15
+Iphone    5
+
+https://github.com/npsitecore/SXAHabitat910.git
+
+nagendra.p.sitecore@gmail.com
+Now@123456
+
+https://sc910sxa.sc
+https://sc910sxa.sc/sitecore
+"InstanceUrl": "https://sc910sxa.sc/",
+"ProjectFolder": "C:\\projects\\HabitatHome910",
+https://sc910sxa.sc/unicorn.aspx
+
+C:/Projects/HabitatHome910/scripts/Unicorn/Sync.ps1" -secret 749CABBC85EAD20CE55E2C6066F1BE375D2115696C8A8B24DB6ED1FD60613086 -url https://sc910sxa.sc/unicorn.aspx

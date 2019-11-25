@@ -1,0 +1,52 @@
+-------------------------------------------------Solr for Sitecore 9x------------------------------------------------------------
+Prerequisite
+Step 00 : Open Windows powershell as admin and execute below commands one by one
+          --> PS C:\Windows\System32> Set-ExecutionPolicy -ExecutionPolicy AllSigned
+          --> PS C:\Windows\System32> Set-ExecutionPolicy Bypass -Scope Process -Force; iex ((New-Object System.Net.WebClient).DownloadString('https://chocolatey.org/install.ps1'))
+          --> PS C:\Windows\System32> choco install javaruntime
+          --> PS C:\Windows\System32> choco install nssm
+--------------------------------------------------------------------------------------------------------------------------------
+https://archive.apache.org/dist/lucene/solr/7.5.0/
+https://archive.apache.org/dist/lucene/solr/7.2.1/
+for HTTP: http://localhost:8985/solr/#/
+Step 00 : Download Solr 7.5.0 and Extract to C drive.
+Step 03 : Install Solr 7.5.0    ( cmd promt as admin --> nssm install solr )
+          APPLICATION :- 
+          Path : ?C:\solr-7.5.0\bin\solr.cmd
+          Startup directory : ?C:\solr-7.5.0\bin
+          Arguments :start -f -p 8989
+          Service name : solr-7.5.0
+          DETAILS :- 
+          Display name : solr-7.5.0 & 
+          Description : solr-7.5.0 on port 8989
+
+Step 04 : Start Solr            ( cmd promt as admin --> nssm start solr-7.5.0 )
+
+For HTTPS: https://localhost:8985/solr/#/
+https://localhost:8984/solr
+
+Step 05 : At line no 37 place your keytool.exe path in Solr-SSL.ps1  
+          ex:- C:\Program Files\Java\jre1.8.0_211\bin\keytool.exe
+Step 06 : Execute Solr-ssl.ps1 Script in Powershell as admin mode by checking ExecutionPolicy
+     C:\Sitecore9xHabitat\Solr-ssl.ps1 -KeystoreFile C:\solr-7.5.0\server\etc\solr-ssl.keystore.jks
+	 C:\Sitecore9xHabitat\Solr-ssl.ps1 -KeystoreFile E:\solr-7.2.1\server\etc\solr-ssl.keystore.jks
+Step 07 : Open C:\solr-7.5.0\bin\solr.in.cmd in notepad++ and uncomment lines from 94 to 101
+Step 08 : Stop Solr             ( cmd promt as admin --> nssm stop solr-7.5.0 )
+Step 09 : Start Solr            ( cmd promt as admin --> nssm start solr-7.5.0 )
+Step 10 : from Browser https://localhost:8985/solr/#/
+
+--------------------------------------------------Completed !!-------------------------------------------------------------------
+Set-ExecutionPolicy Unrestricted -Scope LocalMachine
+
+Get-ExecutionPolicy
+Get-ExecutionPolicy -List
+Set-ExecutionPolicy -ExecutionPolicy Unrestricted
+Set-ExecutionPolicy -ExecutionPolicy AllSigned
+Get-ExecutionPolicy
+Unrestricted
+
+CD C:\Sitecore9xHabitat\Solr-ssl.ps1
+CD C:\Windows\System32
+Set-ExecutionPolicy Unrestricted -Scope LocalMachine
+solr: Unexpected status SERVICE_PAUSED in response to START control.
+Set-ExecutionPolicy Bypass -Scope Process -Force; iex ((New-Object System.Net.WebClient).DownloadString('https://chocolatey.org/install.ps1'))

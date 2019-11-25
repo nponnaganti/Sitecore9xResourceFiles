@@ -1,0 +1,33 @@
+http://sc910sxa.sc/
+http://sc910sxa.sc/tenantasitea
+
+9fPko4tDwmjmKL1Nf8Bo
+http://tenantasitea/
+C:\inetpub\wwwroot\sc910sxa.sc
+tenantasitea
+Tenant A Site A
+tenantasitea
+Tenant A Site B
+tenantasiteb
+-----------------------------------------------------------------------------------
+Tenant B Site A
+tenantbsitea
+Tenant B Site B
+tenantbsiteb
+-------
+Now-Site
+Copy-Of-Now-Site
+copy-of-now-site
+http://sc910sxa.sc/sitecore/login
+[ Content Searching ] Sitecore 9.2.0 - SXA 1.9 - Solr 7.5.0 [ Postman App Testing ]
+
+http://sc910sxa.sc
+http://tenantasitea
+http://tenantasiteb
+http://tenantasitec
+http://tenantbsitea
+http://tenantbsiteb
+http://copy-of-now-site
+http://now-site
+
+tenantasitec
